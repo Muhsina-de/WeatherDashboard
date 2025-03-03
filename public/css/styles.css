@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --primary-light: #34495e;
+    --primary-dark: #1a252f;
+    --accent-color: #3498db;
+    --accent-light: #5dade2;
+    --accent-dark: #2980b9;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --background: #f8f9fa;
+    --card-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    background: var(--background);
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: var(--card-shadow);
+}
+
+main {
+    display: flex;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+aside {
+    width: 300px;
+}
+
+#search-form {
+    margin-bottom: 1rem;
+}
+
+#city-input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+#current-weather {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: white;
+    padding: 2rem;
+}
+
+#forecast {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.forecast-day {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    height: 100%;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.history-item:hover {
+    background: var(--accent-light);
+    color: white;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--danger-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.weather-icon {
+    width: 64px;
+    height: 64px;
+    margin: 10px 0;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1;
+    margin: 1rem 0;
+}
+
+.conditions {
+    font-size: 1.1rem;
+    color: #666;
+    text-transform: capitalize;
+}
+
+/* Custom Bootstrap overrides */
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.form-control {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.display-4 {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lead {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.5rem;
+}
+
+.card-header h5 {
+    margin: 0;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .temperature {
+        font-size: 2.5rem;
+    }
+    
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* Placeholder text color */
+::placeholder {
+    color: var(--accent-color) !important;
+    opacity: 0.5;
+} 
